@@ -13,14 +13,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/i18n`,
+        path: `${__dirname}/src/i18n`,
         name: `i18n`,
       },
     },
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        localeJsonSourceName: `locale`,
+        localeJsonSourceName: `i18n`,
         languages: [`sk`, `en`, `it`],
         defaultLanguage: `sk`,
         siteUrl: `http://localhost:8000/`,
@@ -31,17 +31,6 @@ module.exports = {
           keySeparator: false,
           nsSeparator: false,
         },
-        pages: [
-          {
-            matchPath: '/:lang?/blog/:uid',
-            getLanguageFromPath: true,
-            excludeLanguages: ['es'],
-          },
-          {
-            matchPath: '/preview',
-            languages: ['en'],
-          },
-        ],
       },
     },
   ],

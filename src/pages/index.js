@@ -11,13 +11,14 @@ import customerData from '../data/customer-data';
 import HeroImage from '../svg/HeroImage';
 import SvgCharts from '../svg/SvgCharts';
 import { MyContext } from '../context';
+import Layout from '../components/layout/Layout';
 
 const Index = () => {
   const ctx = useContext(MyContext);
   const { t } = useTranslation();
   console.log(ctx);
   return (
-    <>
+    <Layout>
       <section className="pt-20 md:pt-40">
         <div className="container mx-auto px-8 lg:flex">
           <div className="text-center lg:text-left lg:w-1/2">
@@ -154,7 +155,7 @@ const Index = () => {
           <Button size="xl">Get Started Now</Button>
         </p>
       </section>
-    </>
+    </Layout>
   );
 };
 
