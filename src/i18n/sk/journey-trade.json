@@ -1,3 +1,9 @@
 {
-  "title": "Journey trade titulka"
+  "title": "Journey trade titulka",
+  "pages": {
+    "about": "Kto sme",
+    "personalCare": "Osobna starostlivost",
+    "houseCare": "Domaca starostlivost",
+    "contact": "Kontakt"
+  }
 }

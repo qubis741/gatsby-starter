@@ -24,13 +24,6 @@ module.exports = {
         languages: [`sk`, `en`, `it`],
         defaultLanguage: `sk`,
         siteUrl: `http://localhost:8000/`,
-        i18nextOptions: {
-          interpolation: {
-            escapeValue: false,
-          },
-          keySeparator: false,
-          nsSeparator: false,
-        },
       },
     },
   ],
