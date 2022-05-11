@@ -1,9 +1,25 @@
 {
   "title": "Journey trade titulka",
-  "pages": {
-    "about": "Kto sme",
-    "personalCare": "Osobna starostlivost",
-    "houseCare": "Domaca starostlivost",
-    "contact": "Kontakt"
+  "sections": {
+    "about": {
+      "menuTitle": "Kto sme",
+      "title": "Kto sme",
+      "description": "Popis"
+    },
+    "personalCare": {
+      "menuTitle": "Osobna starostlivost",
+      "title": "Osobna starostlivost",
+      "description": "Popis"
+    },
+    "houseCare": {
+      "menuTitle": "Domaca starostlivost",
+      "title": "Domaca starostlivost",
+      "description": "Popis"
+    },
+    "contact": {
+      "menuTitle": "Kontakt",
+      "title": "Kontakt",
+      "description": "Popis"
+    }
   }
 }

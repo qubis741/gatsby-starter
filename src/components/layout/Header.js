@@ -44,7 +44,7 @@ const Header = () => {
                 href={`#${page}`}
                 key={page}
               >
-                <span>{t(`pages.${page}`)}</span>
+                <span>{t(`sections.${page}.menuTitle`)}</span>
               </AnchorLink>
             ))}
             <div

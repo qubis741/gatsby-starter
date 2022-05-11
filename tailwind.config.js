@@ -1,6 +1,6 @@
-const projects = require('./src/projects');
+const colorsJT = require('./src/projects/journey-trade/colors');
 
-const { colors } = projects[process.env.GATSBY_PAGE];
+const colors = process.env.GATSBY_PAGE === 'journeyTrade' ? colorsJT : null;
 
 module.exports = {
   theme: {
