@@ -1,1 +1,2 @@
-export const pages = ['about', 'personalCare', 'houseCare', 'contact'];
+const pages = ['about', 'personalCare', 'houseCare', 'contact'];
+module.exports = pages;

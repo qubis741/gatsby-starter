@@ -1,7 +1,11 @@
-import { pages as JTPages } from './journey-trade/pages';
+const JTPages = require('./journey-trade/pages');
+const JTColors = require('./journey-trade/colors');
 
-export const projects = {
+const projects = {
   journeyTrade: {
     pages: JTPages,
+    colors: JTColors,
   },
 };
+
+module.exports = projects;

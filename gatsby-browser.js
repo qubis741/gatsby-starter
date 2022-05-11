@@ -1,6 +1,6 @@
 import React from 'react';
 import { MyContext } from './src/context';
-import { projects } from './src/projects';
+import projects from './src/projects';
 import './src/css/tailwind.css';
 
 export const wrapRootElement = ({ element }) => {

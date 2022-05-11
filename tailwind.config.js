@@ -1,15 +1,13 @@
+const projects = require('./src/projects');
+
+const { colors } = projects[process.env.GATSBY_PAGE];
+
 module.exports = {
   theme: {
     extend: {
-      colors: {
-        primary: {
-          lighter: 'hsl(207, 73%, 52%)',
-          default: 'hsl(207, 73%, 57%)',
-          darker: 'hsl(207, 73%, 44%)'
-        }
-      }
-    }
+      colors,
+    },
   },
   variants: {},
-  plugins: []
+  plugins: [],
 };
