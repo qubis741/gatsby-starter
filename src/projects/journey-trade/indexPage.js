@@ -1,4 +1,4 @@
-import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import Button from '../../components/Button';
@@ -32,7 +32,7 @@ const IndexPage = () => {
     <div>
       <section className="pt-20 md:pt-40">
         <div className="container mx-auto px-8 lg:flex">
-          <StaticImage src={assets.heroImg} alt="A dinosaur" />
+          <GatsbyImage src={assets.heroImg} alt="A dinosaur" />
         </div>
       </section>
       <SplitSectionJourney
