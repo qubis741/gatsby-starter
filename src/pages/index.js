@@ -5,7 +5,6 @@ import { MyContext } from '../context';
 
 const Index = () => {
   const ctx = useContext(MyContext);
-  console.log(ctx);
   const IndexPage = ctx.project.indexPage;
   return (
     <Layout>
@@ -17,7 +16,7 @@ const Index = () => {
 export default Index;
 
 export const query = graphql`
-  query($language: String!) {
+  query ($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {

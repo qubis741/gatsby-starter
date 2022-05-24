@@ -2,6 +2,9 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const projectDir = {
+  journeyTrade: 'journey-trade',
+};
 module.exports = {
   plugins: [
     `gatsby-plugin-image`,
@@ -13,6 +16,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/i18n`,
         name: `i18n`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/projects/${projectDir[process.env.GATSBY_PAGE]}/assets`,
       },
     },
     {

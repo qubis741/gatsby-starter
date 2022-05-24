@@ -1,4 +1,5 @@
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import Button from '../../components/Button';
@@ -9,12 +10,27 @@ import { MyContext } from '../../context';
 import customerData from '../../data/customer-data';
 import SvgCharts from '../../svg/SvgCharts';
 
+const useProjectAssets = () => {
+  const data = useStaticQuery(
+    graphql`
+      query JTProjectAssets {
+        file(name: { eq: "hero" }, sourceInstanceName: { eq: "assets" }) {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
+      }
+    `
+  );
+  return data;
+};
+
 const SplitSectionJourney = ({ id, title, description, reverse = false, img }) => (
   <SplitSection
     id={id}
     primarySlot={
       <div className="lg:pr-32 xl:pr-48">
-        <h3 className="text-3xl font-semibold leading-tight">{title}</h3>
+        <h3 className="text-3xl font-semibold leading-tight text-primary">{title}</h3>
         <p className="mt-8 text-xl font-light leading-relaxed">{description}</p>
       </div>
     }
@@ -25,15 +41,15 @@ const SplitSectionJourney = ({ id, title, description, reverse = false, img }) =
 
 const IndexPage = () => {
   const {
-    project: { pages, assets },
+    project: { pages },
   } = useContext(MyContext);
   const { t } = useTranslation();
+  const data = useProjectAssets();
+  const hero = getImage(data.file);
   return (
     <div>
-      <section className="pt-20 md:pt-40">
-        <div className="container mx-auto px-8 lg:flex">
-          <GatsbyImage src={assets.heroImg} alt="A dinosaur" />
-        </div>
+      <section className="">
+        <GatsbyImage image={hero} alt="TODO META" objectFit="cover" className="md:h-128 h-64" />
       </section>
       <SplitSectionJourney
         id={pages[0]}

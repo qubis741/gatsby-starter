@@ -1,9 +1,5 @@
 const colors = {
-  primary: {
-    lighter: '#ff3232',
-    default: '#ff0000',
-    darker: '#d00202',
-  },
+  primary: '#ff0000',
   background: '#ffffff',
 };
 

@@ -27,7 +27,7 @@ const Header = () => {
   }, []);
   return (
     <header className="sticky top-0 bg-background shadow h-20">
-      <div className="md:container flex justify-between items-stretch md:mx-auto md:mx-0 px-5 h-full">
+      <div className="md:container flex justify-between items-stretch md:mx-auto mx-0 px-5 h-full">
         <div className="flex items-stretch text-2xl">
           <AnchorLink href="#home" className="w-12 mr-3 flex items-center">
             <LogoIcon />
@@ -40,7 +40,7 @@ const Header = () => {
           <div className="flex items-stretch md:flex-row flex-col md:space-y-0 space-y-3 ">
             {project.pages.map((page) => (
               <AnchorLink
-                className="md:px-3 flex items-center md:justify-center justify-end "
+                className="md:px-3 flex items-center md:justify-center justify-end text-primary"
                 href={`#${page}`}
                 key={page}
               >
@@ -52,7 +52,7 @@ const Header = () => {
               ref={langRef}
             >
               <a
-                className="cursor-pointer flex-row items-center px-3 md:justify-center justify-end md:flex hidden"
+                className="cursor-pointer flex-row items-center px-3 md:justify-center justify-end md:flex hidden text-primary"
                 onClick={() => setShowLangs((prev) => !prev)}
                 onKeyDown={() => setShowLangs((prev) => !prev)}
                 role="button"
@@ -67,7 +67,7 @@ const Header = () => {
                   style={{ top: '100%' }}
                 >
                   {languages.map((lng) => (
-                    <li key={lng} className="flex md:text-center text-right">
+                    <li key={lng} className="flex md:text-center text-right text-primary">
                       <Link
                         to={originalPath}
                         language={lng}
@@ -85,7 +85,7 @@ const Header = () => {
           </div>
         </div>
         <a
-          className="cursor-pointer flex-row items-center md:hidden flex text-3xl"
+          className="cursor-pointer flex-row items-center md:hidden flex text-3xl text-primary"
           onClick={() => setShowRespoMenu((prev) => !prev)}
           onKeyDown={() => setShowRespoMenu((prev) => !prev)}
           role="button"

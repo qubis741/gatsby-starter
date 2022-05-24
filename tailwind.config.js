@@ -6,7 +6,13 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      colors,
+      colors: {
+        primary: colors.primary,
+        background: colors.background,
+      },
+      height: {
+        128: '32rem',
+      },
     },
   },
   variants: {},
