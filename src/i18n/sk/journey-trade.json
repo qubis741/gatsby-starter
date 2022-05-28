@@ -19,7 +19,11 @@
     "contact": {
       "menuTitle": "Kontakt",
       "title": "Kontakt",
-      "description": "Popis"
+      "description": "Popis",
+      "copy": {
+        "email": "Email je skopírovaný",
+        "phone": "Telefónne číslo je skopírované"
+      }
     }
   }
 }

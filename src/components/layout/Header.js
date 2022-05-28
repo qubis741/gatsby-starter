@@ -26,7 +26,7 @@ const Header = () => {
     };
   }, []);
   return (
-    <header className="sticky top-0 bg-background shadow h-20">
+    <header className="sticky top-0 bg-background shadow h-20 z-10">
       <div className="md:container flex justify-between items-stretch md:mx-auto mx-0 px-5 h-full">
         <div className="flex items-stretch text-2xl">
           <AnchorLink href="#home" className="w-12 mr-3 flex items-center">
